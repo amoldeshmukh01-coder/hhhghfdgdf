@@ -1,0 +1,6 @@
+{
+  "name": "GramSwachh Fleet",
+  "description": "Rural garbage collection van fleet management with live GPS tracking, village routes, and point-by-point monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Van / Truck Body (Centered within 66dp safe box: x=24..84, y=26..82) -->
+    <!-- Truck Cargo Bay -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,40 L58,40 L58,66 L26,66 Z" />
+    
+    <!-- Truck Cabin & Hood -->
+    <path
+        android:fillColor="#E2E8F0"
+        android:pathData="M59,44 L70,44 L78,54 L78,66 L59,66 Z" />
+    
+    <!-- Windshield -->
+    <path
+        android:fillColor="#047857"
+        android:pathData="M61,47 L69,47 L75,54 L61,54 Z" />
+    
+    <!-- Eco recycling / green leaf emblem on cargo container -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M42,44 C38,44 35,47 35,51 C38,51 44,49 44,44 Z" />
+    <path
+        android:fillColor="#059669"
+        android:pathData="M42,44 C46,44 49,47 49,51 C46,51 40,49 42,44 Z" />
+    
+    <!-- Truck Base Chasis & Bumpers -->
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M24,64 L80,64 L80,68 L24,68 Z" />
+    
+    <!-- Wheels -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M35,66m-6,0a6,6 0,1,1 12,0a6,6 0,1,1 -12,0" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M35,66m-2.5,0a2.5,2.5 0,1,1 5,0a2.5,2.5 0,1,1 -5,0" />
+
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M69,66m-6,0a6,6 0,1,1 12,0a6,6 0,1,1 -12,0" />
+    <path
+        android:fillColor="#F8FAFC"
+        android:pathData="M69,66m-2.5,0a2.5,2.5 0,1,1 5,0a2.5,2.5 0,1,1 -5,0" />
+
+    <!-- Top GPS Beacon Pin Badge -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M54,23 C50,23 47,26 47,30 C47,34 54,41 54,41 C54,41 61,34 61,30 C61,26 58,23 54,23 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,29m-2,0a2,2 0,1,1 4,0a2,2 0,1,1 -4,0" />
+</vector>

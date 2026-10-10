@@ -1,0 +1,88 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile for Gram Panchayat staff or driver",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "phone": { "type": "string" },
+        "assignedVillageId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "displayName", "email", "role"]
+    },
+    "CollectionAction": {
+      "title": "CollectionAction",
+      "description": "Garbage collection point status log",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "pointId": { "type": "string" },
+        "pointName": { "type": "string" },
+        "villageName": { "type": "string" },
+        "status": { "type": "string" },
+        "wetKg": { "type": "number" },
+        "dryKg": { "type": "number" },
+        "hazardousKg": { "type": "number" },
+        "notes": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "pointId", "status"]
+    },
+    "FleetTelemetry": {
+      "title": "FleetTelemetry",
+      "description": "GPS tracking telemetry update",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "vanId": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "speedKmH": { "type": "number" },
+        "heading": { "type": "number" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "vanId", "latitude", "longitude"]
+    },
+    "FleetAlert": {
+      "title": "FleetAlert",
+      "description": "Fleet warning or emergency SOS notification",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "vanId": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "severity": { "type": "string" },
+        "isResolved": { "type": "boolean" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "userId", "vanId", "title", "severity"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/profile": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Profile of the authenticated user"
+    },
+    "/users/{userId}/collections/{collectionId}": {
+      "schema": { "$ref": "#/entities/CollectionAction" },
+      "description": "User collection point activity logs"
+    },
+    "/users/{userId}/telemetry/{telemetryId}": {
+      "schema": { "$ref": "#/entities/FleetTelemetry" },
+      "description": "User van GPS telemetry pings"
+    },
+    "/users/{userId}/alerts/{alertId}": {
+      "schema": { "$ref": "#/entities/FleetAlert" },
+      "description": "User fleet alerts"
+    }
+  }
+}
